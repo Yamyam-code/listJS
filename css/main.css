@@ -1,0 +1,226 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+@media (max-width: 1439px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+@media (max-width: 801px) {
+  html,
+  body {
+    font-size: 10.7px;
+  }
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.wall {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 1s;
+  z-index: 1;
+}
+.inner {
+  width: 72rem;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+.click-x {
+  pointer-events: none;
+}
+
+header {
+  height: 10rem;
+  border-collapse: collapse;
+  background-color: gray;
+}
+
+main {
+}
+main .inner {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  gap: 30px;
+}
+
+.profile {
+  position: relative;
+  height: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.7);
+}
+.owner {
+  width: 3rem;
+  height: 1.5rem;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem;
+  top: 0;
+  left: 4.9rem;
+  background-color: yellow;
+}
+
+.to-profile {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  background-color: rgb(1, 1, 160);
+  color: white;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.add-function-wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons {
+  display: flex;
+}
+.button {
+  width: 5rem;
+  height: 2.5rem;
+  background-color: rgb(1, 1, 160);
+  color: white;
+  text-align: center;
+  line-height: 2.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.button:last-child {
+  margin-left: 20px;
+}
+
+.information {
+  position: absolute;
+  top: calc(50% - 17.5rem);
+  left: calc(50% - 12.5rem);
+  width: 25rem;
+  height: 35rem;
+  background-color: rgb(1, 1, 160);
+  color: white;
+  transition: opacity 1s;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 2.5rem;
+}
+.information form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+.information #form-exit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.information form input {
+  width: 15rem;
+  height: 1.5rem;
+}
+
+.list-head {
+  width: 70rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.list-head .first {
+  width: 16rem;
+  display: flex;
+  gap: 6.5rem;
+}
+
+.list-head .second {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 15rem;
+  box-sizing: border-box;
+  border: 3px solid black;
+  margin: 0.5rem 0;
+}
+
+.item .checkbox-img-wrap {
+  display: flex;
+  gap: 5rem;
+}
+
+.item .people-img {
+  width: 10rem;
+  height: 10rem;
+  background-color: white;
+  margin-top: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+.people-text {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.text {
+  width: 7.5rem;
+  text-align: center;
+}
+
+footer {
+  height: 10rem;
+  border-collapse: collapse;
+  background-color: blue;
+}

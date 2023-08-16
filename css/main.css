@@ -49,7 +49,7 @@ main .inner {
   }
   .inner {
     width: 100%;
-    min-width: 480px;
+    min-width: 440px;
   }
   .list-head .second {
     margin-left: 14px;

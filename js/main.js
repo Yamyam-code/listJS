@@ -75,6 +75,7 @@ function addNewPeople(name, email, phone) {
   console.log(peoples);
   list.append(itemEl);
   addHadPeoples();
+  blink();
 }
 
 function addPeopleEl(people) {
@@ -137,6 +138,7 @@ function deletePeopleEl() {
     }
   }
   allCheckEl.checked = false;
+  blink();
 }
 
 function changeVisible(item) {
@@ -194,3 +196,21 @@ function addHadPeoples() {
   console.log(`현재 직원 수 = ${hadPeoples}`);
   employees.innerHTML = `직원: ${hadPeoples}`;
 }
+
+function blink() {
+  employees.classList.add('blink');
+  setTimeout(() => {
+    employees.classList.remove('blink');
+  }, 1000);
+}
+
+function ownerProfile() {
+  const name = document.querySelector('#owner-name');
+  const email = document.querySelector('#owner-email');
+  const phone = document.querySelector('#owner-phone');
+  const owner = JSON.parse(localStorage.getItem('owner'));
+  name.innerHTML = owner.name;
+  email.innerHTML = owner.email;
+  phone.innerHTML = owner.phone;
+}
+ownerProfile();

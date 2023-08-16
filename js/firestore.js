@@ -23,9 +23,11 @@ async function uploadImg(name) {
 async function firstBuildImg(name, id) {
   try {
     await uploadImg(name);
-    const url = await peoplesRef.child(name).getDownloadURL();
-    const img = document.getElementsByClassName(id)[0];
-    img.src = url;
+    setTimeout(async () => {
+      const url = await peoplesRef.child(name).getDownloadURL();
+      const img = document.getElementsByClassName(id)[0];
+      img.src = url;
+    }, 700);
   } catch (err) {
     console.log(err);
   }

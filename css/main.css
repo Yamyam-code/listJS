@@ -63,15 +63,13 @@ header {
   background-color: gray;
 }
 
-main {
-}
 main .inner {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 1rem;
   border-left: 3px solid black;
   border-right: 3px solid black;
-  gap: 30px;
+  gap: 1.5rem;
 }
 
 .profile {
@@ -176,6 +174,10 @@ main .inner {
   width: 16rem;
   display: flex;
   gap: 6.5rem;
+}
+
+.list-head .first .text {
+  width: auto;
 }
 
 .list-head .second {

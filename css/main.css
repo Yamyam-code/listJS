@@ -11,6 +11,9 @@ body {
   body {
     font-size: 15px;
   }
+  .inner {
+    width: 72rem;
+  }
 }
 @media (max-width: 1079px) {
   html,
@@ -22,6 +25,9 @@ body {
   html,
   body {
     font-size: 5.4px;
+  }
+  .inner {
+    width: 100%;
   }
 }
 h1 {
@@ -39,7 +45,6 @@ h1 {
   z-index: 1;
 }
 .inner {
-  width: 72rem;
   height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -63,8 +68,6 @@ header {
   background-color: gray;
 }
 
-main {
-}
 main .inner {
   display: flex;
   flex-direction: column;

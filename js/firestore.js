@@ -27,7 +27,7 @@ async function firstBuildImg(name, id) {
       const url = await peoplesRef.child(name).getDownloadURL();
       const img = document.getElementsByClassName(id)[0];
       img.src = url;
-    }, 700);
+    }, 1000);
   } catch (err) {
     console.log(err);
   }

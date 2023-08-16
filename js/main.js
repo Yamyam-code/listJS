@@ -99,7 +99,7 @@ function addPeopleEl(people) {
   peopleName.classList.add('name', 'text');
   peopleName.innerHTML = people.name;
   const peopleEmail = document.createElement('div');
-  peopleEmail.classList.add('emaie', 'text');
+  peopleEmail.classList.add('email', 'text');
   peopleEmail.innerHTML = people.email;
   const peoplePhone = document.createElement('div');
   peoplePhone.classList.add('phone', 'text');
@@ -126,8 +126,10 @@ function addPeopleEl(people) {
 
 function deletePeopleEl() {
   peoples.forEach((e) => {
-    localStorage.removeItem(e.name);
-    deleteImg(e.name);
+    if (e.check === true) {
+      localStorage.removeItem(e.name);
+      deleteImg(e.name);
+    }
   });
   peoples = peoples.filter((e) => e.check === false);
   for (let i = list.childNodes.length - 1; i >= 0; i--) {
@@ -151,7 +153,7 @@ function changeHidden(item) {
 }
 
 function buildList() {
-  for (let i = 0; i < localStorage.length; i++) {
+  for (let i = localStorage.length - 1; i >= 0; i--) {
     if (localStorage.key(i) === 'owner') {
       console.log(
         `${JSON.parse(localStorage.getItem('owner')).name}님이 접속하셨습니다.`

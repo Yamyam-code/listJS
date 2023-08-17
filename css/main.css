@@ -92,7 +92,8 @@ main .inner {
     margin-left: 15px;
   }
   main .inner {
-    border: none;
+    border-left: none;
+    border-right: none;
   }
   .information form {
     display: flex;
@@ -176,6 +177,11 @@ main .inner {
   background-color: rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.7);
 }
+.profile .people-img {
+  margin: 0;
+  border-radius: 0;
+}
+
 .owner {
   position: absolute;
   text-align: center;
@@ -196,12 +202,6 @@ main .inner {
   50% {
     background-color: rgba(255, 255, 0);
   }
-}
-
-.to-profile {
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 
 .add-function-wrap {
@@ -266,6 +266,7 @@ main .inner {
   box-sizing: border-box;
   margin: 0.5rem 0;
   border: 3px solid black;
+  cursor: pointer;
 }
 
 .item .checkbox-img-wrap {
@@ -273,7 +274,7 @@ main .inner {
   gap: 5rem;
 }
 
-.item .people-img {
+.people-img {
   width: 10rem;
   height: 10rem;
   background-color: white;

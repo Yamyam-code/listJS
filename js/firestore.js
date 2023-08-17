@@ -1,15 +1,6 @@
-const db = firebase.firestore();
 const storage = firebase.storage();
-
-db.collection('people')
-  .get()
-  .then((i) => {
-    i.forEach((e) => {
-      console.log(e.data());
-    });
-  });
-
 const storageRef = storage.ref();
+const defaltPeopleRef = storageRef.child('기본');
 const peoplesRef = storageRef.child(
   `${JSON.parse(localStorage.getItem('owner')).name}/`
 );
@@ -25,7 +16,7 @@ async function firstBuildImg(name, id) {
     await uploadImg(name);
     setTimeout(async () => {
       const url = await peoplesRef.child(name).getDownloadURL();
-      const img = document.getElementsByClassName(id)[0];
+      const img = document.getElementsByClassName(id)[1];
       img.src = url;
     }, 1000);
   } catch (err) {
@@ -33,31 +24,44 @@ async function firstBuildImg(name, id) {
   }
 }
 
-function buildImg(name, id) {
-  peoplesRef
-    .child(name)
-    .getDownloadURL()
-    .then((url) => {
-      const img = document.getElementsByClassName(id)[0];
-      img.src = url;
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+function buildImg(name, id, type) {
+  if (type === 'defalt') {
+    defaltPeopleRef
+      .child(`${name}.png`)
+      .getDownloadURL()
+      .then((url) => {
+        const img = document.getElementsByClassName(id)[1];
+        img.src = url;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  } else {
+    peoplesRef
+      .child(name)
+      .getDownloadURL()
+      .then((url) => {
+        const img = document.getElementsByClassName(id)[1];
+        img.src = url;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 }
 
-function uploadData() {
-  const data = {};
-}
-
-function deleteImg(name) {
-  peoplesRef
-    .child(name)
-    .delete()
-    .then(console.log(`${name} 삭제 완료`))
-    .catch((err) => {
-      console.log(err);
-    });
+function deleteImg(name, type) {
+  if (type === 'defalt') {
+    console.log(`${name} 삭제 완료`);
+  } else {
+    peoplesRef
+      .child(name)
+      .delete()
+      .then(console.log(`${name} 삭제 완료`))
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 }
 
 export { firstBuildImg, buildImg, deleteImg };

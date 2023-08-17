@@ -16,6 +16,24 @@ main .inner {
   border-left: 3px solid black;
   border-right: 3px solid black;
 }
+
+.information {
+  position: absolute;
+  top: calc(50% - 17.5rem);
+  left: calc(50% - 12.5rem);
+  width: 25rem;
+  height: 35rem;
+  background-color: rgb(1, 1, 160);
+  color: white;
+  transition: opacity 1s;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 2.5rem;
+}
 .information form {
   display: flex;
   flex-direction: column;
@@ -26,6 +44,24 @@ main .inner {
 .information form input {
   width: 15rem;
   height: 1.5rem;
+}
+.text {
+  width: 7.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+}
+.button {
+  width: auto;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  background-color: rgb(1, 1, 160);
+  color: white;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.3s;
 }
 @media (max-width: 1439px) {
   html,
@@ -49,10 +85,11 @@ main .inner {
   }
   .inner {
     width: 100%;
-    min-width: 400px;
+    min-width: 480px;
+    font-size: 16px;
   }
   .list-head .second {
-    margin-left: 14px;
+    margin-left: 15px;
   }
   main .inner {
     border: none;
@@ -71,6 +108,19 @@ main .inner {
   .information form input[type='file'] {
     width: auto;
     height: auto;
+  }
+  .p-data {
+    line-height: 19px;
+  }
+  input {
+    font-size: 10px;
+  }
+  .information {
+    width: 35rem;
+    height: 45rem;
+  }
+  .button {
+    padding: 1rem;
   }
 }
 h1 {
@@ -162,41 +212,13 @@ main .inner {
 .buttons {
   display: flex;
 }
-.button {
-  width: auto;
-  height: 1.5rem;
-  line-height: 1.5rem;
-  background-color: rgb(1, 1, 160);
-  color: white;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  transition: transform 0.3s;
-}
+
 .button:hover {
   transform: scale(1.1);
 }
 
 #delete-btn {
   margin-left: 20px;
-}
-
-.information {
-  position: absolute;
-  top: calc(50% - 17.5rem);
-  left: calc(50% - 12.5rem);
-  width: 25rem;
-  height: 35rem;
-  background-color: rgb(1, 1, 160);
-  color: white;
-  transition: opacity 1s;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 2.5rem;
 }
 
 .information #form-exit {
@@ -264,10 +286,6 @@ main .inner {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-.text {
-  width: 7.5rem;
-  text-align: center;
 }
 
 footer {

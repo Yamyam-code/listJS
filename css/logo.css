@@ -2,13 +2,13 @@
   font-size: 3.5rem;
 }
 .logo.one {
-  animation: wave 3s infinite;
+  animation: wave 3s ease-out infinite;
 }
 .logo.two {
-  animation: wave 2s infinite;
+  animation: wave 2s ease-out infinite;
 }
 .logo.three {
-  animation: wave 4s infinite;
+  animation: wave 4s ease-out infinite;
 }
 
 @keyframes wave {

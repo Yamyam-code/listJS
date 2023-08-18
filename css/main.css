@@ -89,7 +89,7 @@ main .inner {
     font-size: 12px;
   }
   .list-head .second {
-    margin-left: 15px;
+    padding-left: 10px;
   }
   main .inner {
     border-left: none;

@@ -95,33 +95,40 @@ main .inner {
     border-left: none;
     border-right: none;
   }
+  .information {
+    position: absolute;
+    top: calc(50% - 35rem);
+    left: calc(50% - 25rem);
+    width: 50rem;
+    height: 70rem;
+  }
   .information form {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 7rem;
     margin-top: 2rem;
+    font-size: 15px;
   }
   .information form input {
-    width: 15rem;
-    height: 1rem;
+    width: 30rem;
+    height: 3rem;
   }
   .information form input[type='file'] {
     width: auto;
     height: auto;
+    margin-left: 90px;
   }
   .p-data {
     line-height: 19px;
   }
   input {
-    font-size: 10px;
-  }
-  .information form input {
-    width: 20rem;
-    height: 2rem;
+    font-size: 15px;
   }
   .button {
     padding: 1rem;
+    font-size: 3rem;
   }
 }
 h1 {

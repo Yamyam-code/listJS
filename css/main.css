@@ -63,77 +63,7 @@ main .inner {
   padding: 0.5rem;
   transition: transform 0.3s;
 }
-@media (max-width: 1439px) {
-  html,
-  body {
-    font-size: 15px;
-  }
-}
-@media (max-width: 1079px) {
-  html,
-  body {
-    font-size: 10.7px;
-  }
-  .list-head .second {
-    margin-left: 7px;
-  }
-}
-@media (max-width: 700px) {
-  html,
-  body {
-    font-size: 5.4px;
-  }
-  .inner {
-    width: 100%;
-    min-width: 400px;
-    font-size: 12px;
-  }
-  .list-head .second {
-    padding-left: 10px;
-  }
-  main .inner {
-    border-left: none;
-    border-right: none;
-  }
-  .information {
-    position: absolute;
-    top: calc(50% - 35rem);
-    left: calc(50% - 25rem);
-    width: 50rem;
-    height: 70rem;
-    font-size: 15px;
-  }
-  .information form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 7rem;
-    margin-top: 2rem;
-  }
-  .information form h1 {
-    font-size: 3rem;
-  }
-  .information form input {
-    width: 30rem;
-    height: 3rem;
-  }
-  .information form input[type='file'] {
-    width: auto;
-    height: auto;
-    margin-left: 90px;
-  }
-  .p-data {
-    line-height: 19px;
-  }
-  input {
-    font-size: 15px;
-  }
-  .button {
-    padding: 1rem;
-    font-size: 3rem;
-  }
-}
+
 h1 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -305,4 +235,78 @@ footer {
 }
 footer .inner {
   border-top: 3px solid black;
+}
+@media (max-width: 1439px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1079px) {
+  html,
+  body {
+    font-size: 10.7px;
+  }
+  .list-head .second {
+    margin-left: 7px;
+  }
+}
+@media (max-width: 700px) {
+  html,
+  body {
+    font-size: 5.4px;
+  }
+  .inner {
+    width: 100%;
+    min-width: 400px;
+    font-size: 12px;
+  }
+  #all-check {
+    flex: 1;
+  }
+  .list-head .second {
+    padding-left: 10px;
+  }
+  main .inner {
+    border-left: none;
+    border-right: none;
+  }
+  .information {
+    position: absolute;
+    top: calc(50% - 35rem);
+    left: calc(50% - 25rem);
+    width: 50rem;
+    height: 70rem;
+    font-size: 15px;
+  }
+  .information form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+    margin-top: 2rem;
+  }
+  .information form h1 {
+    font-size: 3rem;
+  }
+  .information form input {
+    width: 30rem;
+    height: 3rem;
+  }
+  .information form input[type='file'] {
+    width: auto;
+    height: auto;
+    margin-left: 90px;
+  }
+  .p-data {
+    line-height: 19px;
+  }
+  input {
+    font-size: 15px;
+  }
+  .button {
+    padding: 1rem;
+    font-size: 3rem;
+  }
 }

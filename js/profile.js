@@ -48,42 +48,46 @@ function buildProfile(people) {
 editBtn.addEventListener('click', editProfile);
 
 function editProfile() {
-  deleteImg(pData.name, pData.type);
-  localStorage.removeItem(pData.name);
-  localStorage.setItem(
-    'profile',
-    JSON.stringify({
-      id: pData.id,
-      name: nameEl.value,
-      email: emailEl.value,
-      phone: phoneEl.value,
-      type: 'add',
-    })
-  );
-  localStorage.setItem(
-    nameEl.value,
-    JSON.stringify({
-      id: pData.id,
-      name: nameEl.value,
-      email: emailEl.value,
-      phone: phoneEl.value,
-      type: 'add',
-    })
-  );
-  pData = JSON.parse(localStorage.getItem('profile'));
-  const peopleName = document.querySelector('.name');
-  peopleName.innerHTML = pData.name;
-  peopleName.classList.add('blink');
-  const peopleEmail = document.querySelector('.email');
-  peopleEmail.innerHTML = pData.email;
-  peopleEmail.classList.add('blink');
-  const peoplePhone = document.querySelector('.phone');
-  peoplePhone.innerHTML = pData.phone;
-  peoplePhone.classList.add('blink');
-  setTimeout(() => {
-    peopleName.classList.remove('blink');
-    peopleEmail.classList.remove('blink');
-    peoplePhone.classList.remove('blink');
-  }, 1000);
-  firstBuildImg(pData.name, pData.id);
+  if (document.querySelector('#file').files[0]) {
+    deleteImg(pData.name, pData.type);
+    localStorage.removeItem(pData.name);
+    localStorage.setItem(
+      'profile',
+      JSON.stringify({
+        id: pData.id,
+        name: nameEl.value,
+        email: emailEl.value,
+        phone: phoneEl.value,
+        type: 'add',
+      })
+    );
+    localStorage.setItem(
+      nameEl.value,
+      JSON.stringify({
+        id: pData.id,
+        name: nameEl.value,
+        email: emailEl.value,
+        phone: phoneEl.value,
+        type: 'add',
+      })
+    );
+    pData = JSON.parse(localStorage.getItem('profile'));
+    const peopleName = document.querySelector('.name');
+    peopleName.innerHTML = pData.name;
+    peopleName.classList.add('blink');
+    const peopleEmail = document.querySelector('.email');
+    peopleEmail.innerHTML = pData.email;
+    peopleEmail.classList.add('blink');
+    const peoplePhone = document.querySelector('.phone');
+    peoplePhone.innerHTML = pData.phone;
+    peoplePhone.classList.add('blink');
+    setTimeout(() => {
+      peopleName.classList.remove('blink');
+      peopleEmail.classList.remove('blink');
+      peoplePhone.classList.remove('blink');
+    }, 1000);
+    firstBuildImg(pData.name, pData.id);
+  } else {
+    alert('이름과 이미지파일을 동시에 수정하셔야 합니다!');
+  }
 }

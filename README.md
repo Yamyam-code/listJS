@@ -8,11 +8,17 @@
 
 https://yamyam-code.github.io/listJS/
 
+## 개발기간
+
+2023.08.08 ~ 2023.08.18
+
 ## 유저플로우
 
 ![유저플로우](https://github.com/Yamyam-code/intro/assets/121215024/611d3eef-2871-44f2-9b6a-0aa6c0223ecc)
 
 ## 세부사항
+
+![리스트](https://github.com/Yamyam-code/intro/assets/121215024/9f05e47a-1b11-4f57-8f19-934baeb6c904)
 
 ### 데이터 관리
 
@@ -26,3 +32,7 @@ https://yamyam-code.github.io/listJS/
 - firebase에서 각 img는 등록 시 입력한 이름이 폴더몀이 되어 개인별로 관리됩니다.
 
 ### 이용
+
+- 첫 접속 시 회원등록 페이지로 접속하게 되며 등록 시 메인 페이지로 이동됩니다.
+- 한 번 등록한 인원은 접속 시 메인 페이지로 바로 이동됩니다.
+- 직원의 추가 제거 시 현재 직원 수가 바로 업데이트 됩니다.

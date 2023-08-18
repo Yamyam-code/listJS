@@ -101,7 +101,9 @@ function addPeopleEl(people) {
   const peoplePhone = document.createElement('div');
   peoplePhone.classList.add('phone', 'text');
   peoplePhone.innerHTML = people.phone;
-
+  const editIcon = document.createElement('span');
+  editIcon.classList.add('material-symbols-outlined');
+  editIcon.innerHTML = 'edit';
   checkbox.addEventListener('change', () => {
     peoples.forEach((e) => {
       if (e.id === people.id) {
@@ -117,6 +119,7 @@ function addPeopleEl(people) {
   textEl.append(peopleName);
   textEl.append(peopleEmail);
   textEl.append(peoplePhone);
+  itemEl.append(editIcon);
   checkbox.addEventListener('click', (event) => {
     event.stopPropagation();
   });

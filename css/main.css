@@ -197,6 +197,7 @@ main .inner {
 }
 
 .item {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -227,6 +228,17 @@ main .inner {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.material-symbols-outlined {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  visibility: hidden;
+}
+
+.item:hover .material-symbols-outlined {
+  visibility: visible;
 }
 
 footer {
@@ -307,6 +319,9 @@ footer .inner {
   }
   .button {
     padding: 2rem;
+    font-size: 3rem;
+  }
+  .material-symbols-outlined {
     font-size: 3rem;
   }
 }

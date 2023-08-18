@@ -6,6 +6,7 @@ const nameEl = document.querySelector('#name');
 const emailEl = document.querySelector('#email');
 const phoneEl = document.querySelector('#phone');
 const editBtn = document.querySelector('#submit');
+const returnBtn = document.querySelector('#return');
 
 let pData = JSON.parse(localStorage.getItem('profile'));
 console.log(pData);
@@ -91,3 +92,7 @@ function editProfile() {
     alert('이름과 이미지파일을 동시에 수정하셔야 합니다!');
   }
 }
+
+returnBtn.addEventListener('click', () => {
+  location.href = 'main.html';
+});

@@ -55,4 +55,4 @@ https://yamyam-code.github.io/listJS/
 
 ## 필수 요구사항
 
-[] “AWS S3 / Firebase 같은 서비스”를 이용하여 사진을 관리할 수 있는 페이지를 구현하세요.
+[x] “AWS S3 / Firebase 같은 서비스”를 이용하여 사진을 관리할 수 있는 페이지를 구현하세요.

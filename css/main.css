@@ -299,6 +299,9 @@ footer .inner {
     gap: 7rem;
     margin-top: 2rem;
   }
+  .information #form-exit {
+    font-size: 4rem;
+  }
   .information form h1 {
     font-size: 3rem;
   }
@@ -321,7 +324,7 @@ footer .inner {
     padding: 2rem;
     font-size: 3rem;
   }
-  .material-symbols-outlined {
+  .material-symbols-outlined.edit {
     font-size: 3rem;
   }
 }

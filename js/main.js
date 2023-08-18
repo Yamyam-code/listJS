@@ -102,7 +102,7 @@ function addPeopleEl(people) {
   peoplePhone.classList.add('phone', 'text');
   peoplePhone.innerHTML = people.phone;
   const editIcon = document.createElement('span');
-  editIcon.classList.add('material-symbols-outlined');
+  editIcon.classList.add('material-symbols-outlined', 'edit');
   editIcon.innerHTML = 'edit';
   checkbox.addEventListener('change', () => {
     peoples.forEach((e) => {

@@ -230,14 +230,14 @@ main .inner {
   align-items: center;
 }
 
-.material-symbols-outlined {
+.material-symbols-outlined.edit {
   position: absolute;
   top: 5px;
   right: 5px;
   visibility: hidden;
 }
 
-.item:hover .material-symbols-outlined {
+.item:hover .material-symbols-outlined.edit {
   visibility: visible;
 }
 

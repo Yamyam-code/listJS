@@ -38,6 +38,10 @@ function buildProfile(people) {
   textEl.append(peoplePhone);
 
   buildImg(people.name, people.id, people.type);
+
+  nameEl.value = pData.name;
+  emailEl.value = pData.email;
+  phoneEl.value = pData.phone;
   return profileEl;
 }
 

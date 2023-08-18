@@ -8,17 +8,15 @@ const peoplesRef = storageRef.child(
 async function uploadImg(name) {
   const file = document.querySelector('#file').files[0];
   const peopleRef = peoplesRef.child(name);
-  const upload = peopleRef.put(file);
+  const upload = await peopleRef.put(file);
 }
 
 async function firstBuildImg(name, id) {
   try {
     await uploadImg(name);
-    setTimeout(async () => {
-      const url = await peoplesRef.child(name).getDownloadURL();
-      const img = document.getElementsByClassName(id)[1];
-      img.src = url;
-    }, 1000);
+    const url = await peoplesRef.child(name).getDownloadURL();
+    const img = document.getElementsByClassName(id)[1];
+    img.src = url;
   } catch (err) {
     console.log(err);
   }

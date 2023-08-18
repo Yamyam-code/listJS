@@ -101,6 +101,7 @@ main .inner {
     left: calc(50% - 25rem);
     width: 50rem;
     height: 70rem;
+    font-size: 15px;
   }
   .information form {
     width: 100%;
@@ -109,7 +110,9 @@ main .inner {
     align-items: center;
     gap: 7rem;
     margin-top: 2rem;
-    font-size: 15px;
+  }
+  .information form h1 {
+    font-size: 3rem;
   }
   .information form input {
     width: 30rem;

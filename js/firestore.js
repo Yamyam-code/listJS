@@ -8,8 +8,7 @@ const peoplesRef = storageRef.child(
 // firebase에 이미지 업로드 및 item에 이미지 불러오기
 async function uploadImg(name) {
   const file = document.querySelector('#file').files[0];
-  const peopleRef = peoplesRef.child(name);
-  const upload = await peopleRef.put(file);
+  await peoplesRef.child(name).put(file);
 }
 
 async function firstBuildImg(name, id) {

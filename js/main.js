@@ -173,18 +173,17 @@ function changeHidden(item) {
 
 // 접속 시 localstorage 데이터를 DOM화
 function buildList() {
-  for (let i = localStorage.length - 1; i >= 0; i--) {
-    if (localStorage.key(i) === 'owner') {
+  Object.keys(localStorage).forEach((key) => {
+    if (key === 'owner') {
       console.log(
         `${JSON.parse(localStorage.getItem('owner')).name}님이 접속하셨습니다.`
       );
-    } else if (localStorage.key(i) === 'profile') {
-      continue;
+    } else if (key === 'profile') {
     } else {
-      const pData = JSON.parse(localStorage.getItem(localStorage.key(i)));
+      const pData = JSON.parse(localStorage.getItem(key));
       buildPeoples(pData);
     }
-  }
+  });
   addHadPeoples();
 }
 // 접속 시 localstorage 데이터를 peopels객체에 저장 및 DOM 요소에 이미지 불러오기
@@ -221,6 +220,8 @@ function allCheck(event) {
 function addHadPeoples() {
   if (JSON.parse(localStorage.getItem('profile'))) {
     hadPeoples = localStorage.length - 2;
+  } else {
+    hadPeoples = localStorage.length - 1;
   }
   console.log(`현재 직원 수 = ${hadPeoples}`);
   employees.innerHTML = `직원: ${hadPeoples}`;
